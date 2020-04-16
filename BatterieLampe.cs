@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR;
 
 //Cette classe gère la batterie de la lampe torche du joueur
-//La lampe peut etre rechargee en secouant le controleur et a 3 etats possibles :
+//La lampe peut etre rechargee en secouant le controleur et a 4 etats possibles :
 // - Recharge : le joueur secoue la lampe et la batterie augmente, la lumiere devient bleue pendant 2 secondes quand la batterie est pleine
 // - Surcharge : Le joueur appuie sur un bouton pour activer ce mode qui rend la lumiere rouge et mortelle pour les ennemis mais consomme plus de batterie
 // - Decharge : La batterie est vide donc la lumiere est eteinte
