@@ -50,7 +50,6 @@ public class DetectionFiole : MonoBehaviour
         {
             OnDetection();
         }
-
         //On detruit l'objet dans tous les cas
         Destroy(autreObjet.gameObject);
     }
@@ -83,7 +82,6 @@ public class DetectionFiole : MonoBehaviour
             case 4:
                 Phase4();
                 break;
-
         }
     }
 
