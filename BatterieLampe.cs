@@ -15,7 +15,7 @@ public class BatterieLampe : MonoBehaviour
     public float Batterie;
     public float MaxBatterie;
 
-    public Light lumiere;
+    public Light Lumiere;
     public SteamVR_Action_Boolean IsSurcharge = null;
 
     private float timerBatteriePleine;
@@ -37,8 +37,8 @@ public class BatterieLampe : MonoBehaviour
         //Si on appuie sur le bouton de surcharge, on vide la batterie plus vite et la lumiere devient rouge
         if (IsSurcharge.state && Batterie>0)
         {
-            lumiere.color = Color.red;
-            lumiere.intensity = 3;
+            Lumiere.color = Color.red;
+            Lumiere.intensity = 3;
             Batterie-=0.5f;
         }
         //On teste si la lampe est secouée
@@ -53,15 +53,15 @@ public class BatterieLampe : MonoBehaviour
             else if (timerBatteriePleine <= 0)
             {
                 timerBatteriePleine = 2;
-                lumiere.color = Color.cyan;
-                lumiere.intensity = 1;
+                Lumiere.color = Color.cyan;
+                Lumiere.intensity = 1;
             }
         } 
         else
         //Sinon la lumiere est blanche
         {
-            lumiere.color = Color.white;
-            lumiere.intensity = 1;
+            Lumiere.color = Color.white;
+            Lumiere.intensity = 1;
         }
 
         //On vide la batterie a chaque update
@@ -76,12 +76,12 @@ public class BatterieLampe : MonoBehaviour
         if (Batterie < 0)
         {
             Batterie = 0;
-            lumiere.enabled = false;
-            lumiere.intensity = 1;
+            Lumiere.enabled = false;
+            Lumiere.intensity = 1;
 
         } else
         {
-            lumiere.enabled = true;
+            Lumiere.enabled = true;
         }
 
         //On met a jour les valeurs pour le prochain appel
